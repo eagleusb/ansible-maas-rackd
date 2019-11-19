@@ -1,9 +1,0 @@
----
-- name: "config | configure regiond"
-  template:
-    src: "etc/maas/regiond.conf.j2"
-    dest: "/etc/maas/regiond.conf"
-    mode: "0640"
-    owner: maas
-    group: maas
-    backup: yes
