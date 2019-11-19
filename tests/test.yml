@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  roles:
+    - ../ansible-maas-rackd
+  vars:
+    maas_regiond:
+      api:
+        scheme: "http"
+        url: "192.168.10.2:5240/MAAS"
+        secret: "6f3207b98a869feaacdf13643d0de79d"
