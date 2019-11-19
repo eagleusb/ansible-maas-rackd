@@ -1,0 +1,10 @@
+---
+
+- name: "import | pass assertions"
+  import_tasks: assert.yml
+
+- name: "import | install maas rack controller"
+  import_tasks: install.yml
+
+- name: "import | make maas rack controller join regiond"
+  import_tasks: join.yml

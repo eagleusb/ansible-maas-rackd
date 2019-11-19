@@ -1,0 +1,16 @@
+---
+maas:
+  repository: "ppa:maas/stable"
+
+maas_rackd:
+  requirements: []
+  package: "maas-rack-controller"
+
+maas_regiond:
+  api:
+    scheme: "http"
+    url: "127.0.0.1:5240/MAAS"
+
+maas_libs:
+  - "python3-libmaas"
+  - "python3-maas-client"

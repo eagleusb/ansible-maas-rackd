@@ -1,0 +1,11 @@
+---
+- name: "restart maas-rackd"
+  service:
+    name: "maas-rackd"
+    state: "restarted"
+  listen: "restart all maas-rackd services"
+
+- name: "mark rackd controller as joined"
+  file:
+    path: "/etc/maas/.rackd_joined"
+    state: "touch"

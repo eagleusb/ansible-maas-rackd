@@ -1,0 +1,11 @@
+---
+# TODO: use regiond API
+- name: "join | join rack controller to region controller"
+  shell:
+    "maas-rack register
+      --url={{ maas_regiond.api.scheme }}://{{ maas_regiond.api.url }}
+      --secret={{ maas_regiond.api.secret | quote() }}"
+  args:
+    executable: "/bin/bash"
+    creates: "/etc/maas/.rackd_joined"
+  notify: "mark rackd controller as joined"
