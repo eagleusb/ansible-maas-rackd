@@ -5,6 +5,24 @@
     state: "restarted"
   listen: "restart all maas-rackd services"
 
+- name: "restart maas-http"
+  service:
+    name: "maas-http"
+    state: "restarted"
+  listen: "restart all maas-rackd services"
+
+- name: "restart maas-proxy"
+  service:
+    name: "maas-proxy"
+    state: "restarted"
+  listen: "restart all maas-rackd services"
+
+- name: "restart bind"
+  service:
+    name: "bind9"
+    state: "restarted"
+  listen: "restart all maas-rackd services"
+
 - name: "mark rackd controller as joined"
   file:
     path: "/etc/maas/.rackd_joined"
