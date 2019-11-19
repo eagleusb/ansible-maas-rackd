@@ -9,3 +9,6 @@
     executable: "/bin/bash"
     creates: "/etc/maas/.rackd_joined"
   notify: "mark rackd controller as joined"
+  when:
+    - maas_regiond.api.secret is defined
+    - maas_regiond.api.secret

@@ -1,1 +1,7 @@
 ---
+- name: "assert | ensure that regiond secret is supplied"
+  assert:
+    that:
+      - maas_regiond.api.secret is defined
+      - maas_regiond.api.secret
+      - maas_regiond.api.secret | length() > 30

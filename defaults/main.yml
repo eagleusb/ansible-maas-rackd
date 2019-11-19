@@ -10,6 +10,7 @@ maas_regiond:
   api:
     scheme: "http"
     url: "127.0.0.1:5240/MAAS"
+    secret:
 
 maas_libs:
   - "python3-libmaas"
